@@ -1,0 +1,17 @@
+import re
+
+def seperate(text):
+    alphanumeric_pattern = r'[a-zA-Z0-9]+'
+    devnagari_pattern = r'[\u0900-\u097F]+'
+    punctuation_pattern = r'[^\w\s]+'
+    
+    alphanumeric = re.findall(alphanumeric_pattern, text)
+    devnagari = re.findall(devnagari_pattern, text)
+    punctuation = re.split(punctuation_pattern, text)
+    
+return alphanumeric, devnagari, punctuation
+
+text = "PFI वर बंदी; गुणरत्न सदावतेंनी घेतला शरद पवारांचा समाचार!"
+text1 = re.findall(r"[a-zA-Z0-9]+|[\u0900-\u097F]+|[^\w\s]", text)
+
+print(text1)
