@@ -5,4 +5,5 @@ touch file2.txt
 touch file3.txt
 touch file4.txt
 touch file5.txt
+touch file6 file7
 ls
